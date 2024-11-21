@@ -1,30 +1,68 @@
+
+
+```html
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redes Sociais</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
+    <title>Crescimento da Audiência - F1 e WEC</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Relatório das redes sociais</h1>
-        <nav>
-            <a href="index.html">Mundo</a>
-            <a href="#">Minha escola</a>
-        </nav>
-    </header>
-    <main class="graficos-section">
-        <section id="graficos-container" class="graficos-container">
-            <!-- crie os gráficos/texto aqui -->
-        </section>
-    </main>
-    <footer>
-        <p>Desenvolvido por Gui Lima</p>
-    </footer>
-    <script type="module" src="graficos/common.js"></script>
-    <script type="module" src="graficos/informacoesGlobais.js"></script>
-    <script type="module" src="graficos/quantidadeUsuarios.js"></script>
+
+    <h1>Crescimento da Audiência - Fórmula 1 e WEC</h1>
+    <canvas id="audiênciaChart" width="400" height="200"></canvas>
+
+    <script>
+        const ctx = document.getElementById('audiênciaChart').getContext('2d');
+        const audiênciaChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['2018', '2019', '2020', '2021', '2022', '2023'], // Anos
+                datasets: [{
+                    label: 'Fórmula 1',
+                    data: [400, 450, 500, 550, 600, 650], // Dados de audiência da F1
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    fill: true
+                },
+                {
+                    label: 'WEC',
+                    data: [200, 250, 280, 300, 320, 350], // Dados de audiência do WEC
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Audiência (milhões)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Ano'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
 </body>
 </html>
+```
+
+### Como usar:
+1. Copie o código acima.
+2. Cole em um arquivo com a extensão `.html` (por exemplo, `audiencia.html`).
+3. Abra o arquivo em um navegador web.
+
+Isso deverá gerar um gráfico mostrando o crescimento da audiência da Fórmula 1 e do WEC ao longo dos anos. Você pode ajustar os dados e os anos conforme necessário! Se precisar de mais alguma coisa, é só avisar.
