@@ -1,62 +1,38 @@
 
-
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crescimento da Audiência - F1 e WEC</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Seu Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Adicione seu CSS existente aqui */
+
+        .footer {
+            background-color: blue; /* Cor de fundo azul */
+            color: white; /* Cor do texto */
+            text-align: center; /* Centraliza o texto */
+            padding: 10px; /* Espaçamento interno */
+            position: relative; /* Posição relativa */
+            bottom: 0; /* Fixa na parte inferior */
+            width: 100%; /* Largura total */
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Crescimento da Audiência - Fórmula 1 e WEC</h1>
-    <canvas id="audiênciaChart" width="400" height="200"></canvas>
+    <!-- Seu conteúdo existente -->
 
-    <script>
-        const ctx = document.getElementById('audiênciaChart').getContext('2d');
-        const audiênciaChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['2018', '2019', '2020', '2021', '2022', '2023'], // Anos
-                datasets: [{
-                    label: 'Fórmula 1',
-                    data: [400, 450, 500, 550, 600, 650], // Dados de audiência da F1
-                    borderColor: 'rgba(255, 99, 132, 1)',
-                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                    fill: true
-                },
-                {
-                    label: 'WEC',
-                    data: [200, 250, 280, 300, 320, 350], // Dados de audiência do WEC
-                    borderColor: 'rgba(54, 162, 235, 1)',
-                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                    fill: true
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        title: {
-                            display: true,
-                            text: 'Audiência (milhões)'
-                        }
-                    },
-                    x: {
-                        title: {
-                            display: true,
-                            text: 'Ano'
-                        }
-                    }
-                }
-            }
-        });
-    </script>
-
+    <footer class="footer">
+        <p>desenvolvido pra projeto de programação</p>
+    </footer>
 </body>
 </html>
 ```
 
+Basta substituir `<!-- Seu conteúdo existente -->` pelo conteúdo que você já tinha no site. Assim, o rodapé azul será adicionado ao final da página. Se precisar de mais ajustes, estou à disposição!
